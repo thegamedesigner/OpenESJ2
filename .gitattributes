@@ -1,0 +1,54 @@
+# Default
+* text=auto
+
+# Source code, Commit LF Checkout system-specific convert spaces->tabs
+*.cs     text diff=csharp
+*.js     text
+*.java   text diff=java
+*.c      text diff=cpp
+*.cpp    text diff=cpp
+*.shader text
+*.cginc  text
+
+# Unity files, commit LF, checkout LF (these are YAML files, so diff them like normal text)
+*.unity                   text eol=lf merge=unityyamlmerge
+*.mat                     text eol=lf merge=unityyamlmerge
+*.meta                    text eol=lf merge=unityyamlmerge
+*.asset                   text eol=lf merge=unityyamlmerge
+*.fontsettings            text eol=lf merge=unityyamlmerge
+*.prefab                  text eol=lf merge=unityyamlmerge
+*.guiskin                 text eol=lf merge=unityyamlmerge
+*.physic[Mm]aterial       text eol=lf merge=unityyamlmerge
+*.physics[Mm]aterial      text eol=lf merge=unityyamlmerge
+*.physics[Mm]aterial2[Dd] text eol=lf merge=unityyamlmerge
+*.tags                    text eol=lf merge=unityyamlmerge
+*.anim                    text eol=lf merge=unityyamlmerge
+*.controller              text eol=lf merge=unityyamlmerge
+
+# Mac files, commit LF, checkout LF
+*.plist text eol=lf
+
+# Audacity files
+*.aup text eol=lf
+
+# Binary files
+*.png   binary
+*.psd   binary
+*.dll   binary
+*.pdf   binary
+*.dylib binary
+*.so    binary
+*.tif   binary
+*.tiff  binary
+*.tga   binary
+*.jar   binary
+*.der   binary
+*.wav   binary
+*.mp3   binary
+*.ogg   binary
+*.otf   binary
+*.OTF   binary
+*.ttf   binary
+*.TTF   binary
+*.bmp   binary
+

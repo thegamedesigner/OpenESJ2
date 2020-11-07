@@ -1,0 +1,313 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RawInfo : MonoBehaviour
+{
+	////
+	//The info script on each Raw gameobject item (on each button, basically, although it's not always a button).
+	////
+
+	public Item item;
+	public static MenuType currentMenu = MenuType.None;//Set by MenuOn() in RawFuncs
+
+	[System.Serializable]
+	public class Item
+	{
+		public MenuType menuType = MenuType.None;//Which menu this item belongs to
+		public string label;
+		public ButtonUID uId = ButtonUID.None;
+		public GameObject controllerGO;
+		public GameObject cursorPosObj;
+		public GameObject lockObj;
+		public GameObject selectionThing;//gets set to active when cursor is on it.
+		public GameObject displayON;
+		public GameObject displayOFF;
+		public GameObject[] otherDisplays;
+		public TextMesh[] otherLabels;
+		public ButtonFunc buttonFunc = ButtonFunc.None;
+		public bool hasCursor = false;
+
+		public ButtonUID up = ButtonUID.None;
+		public ButtonUID down = ButtonUID.None;
+		public ButtonUID left = ButtonUID.None;
+		public ButtonUID right = ButtonUID.None;
+	}
+
+	public enum ButtonUID
+	{
+		None = 0,
+		MainMenu_Play = 1,
+		MainMenu_Options = 2,
+		MainMenu_Quit = 3,
+		NetworkingMenu_SendUsageStats = 4,
+		NetworkingMenu_ViewStats = 5,
+		NetworkingMenu_Back = 6,
+		ViewStats_Back = 7,
+		ViewStats_AllLevels = 8,
+		ViewStats_NumOfPlayers = 9,
+		ViewStats_thegamedesigner = 10,
+		Options_SetControls = 11,
+		Options_Audio = 12,
+		Options_Visual = 13,
+		Options_Gameplay = 14,
+		Options_Networking = 15,
+		Options_Misc = 16,
+		Options_Credits = 17,
+		Options_Back = 18,
+		InGameHub_Resume = 19,
+		InGameHub_Restart = 20,
+		InGameHub_Options = 21,
+		InGameHub_Quit = 22,
+		Achivo_AllasKlar = 23,
+		Achivo_DaddysLove = 24,
+		Achivo_DontStompa = 25,
+		Achivo_MagicMonk = 26,
+		Achivo_Routes66 = 27,
+		Achivo_Cheater = 28,
+		Achivo_Reverso = 29,
+		Achivo_Champion = 30,
+		Achivo_Details = 31,
+		Controls_SwitchMode = 32,
+		Controls_SetCustom = 33,
+		Controls_Back = 34,
+		RawDebugText = 35,
+		CustomControls_Back = 36,
+		CustomControls_PlatformerControls = 37,
+		CustomControls_FPSControls = 38,
+		CustomControls_MenuControls= 39,
+		CustomControls_Reset = 40,
+		SetCustomControls_Text = 41,
+		SetCustomControls_EscapeText = 42,
+		InGameHub_PGMode = 43,
+		AfterCustomControls_Cancel = 44,
+		AfterCustomControls_Accept = 45,
+		CancelledControls_Ok = 47,
+		RollingCredits_Leave = 48,
+		RollingCredits_Text = 49,
+		AudioMenu_SoundUp = 50,
+		AudioMenu_SoundDown = 51,
+		AudioMenu_SoundDisplay = 52,
+		AudioMenu_Back = 53,
+		AudioMenu_MusicUp = 54,
+		AudioMenu_MusicDown = 55,
+		AudioMenu_MusicDisplay = 56,
+		VisualMenu_VSync = 57,
+		VisualMenu_Back = 58,
+		VisualMenu_SetRes = 59,
+		VisualMenu_ToggleLaggyBackground = 60,
+		VisualMenu_Windowed = 61,
+		ResMenu_Back = 62,
+		ResMenu_PrevRes = 63,
+		ResMenu_NextRes = 64,
+		ResMenu_DisplayRes = 65,
+		ResMenu_AcceptRes = 66,
+		Icon_GoldenButts = 67,
+		Icon_CollectedCoins = 68,
+		Icon_SecretTracks = 69,
+		Icon_Puppies = 70,
+		GameplayMenu_Back = 71,
+		GameplayMenu_ScreenshakeUp = 72,
+		GameplayMenu_ScreenshakeDown = 73,
+		GameplayMenu_ScreenshakeDisplay = 74,
+		GameplayMenu_PGMode = 75,
+		GameplayMenu_ToggleTimer = 76,
+		GameplayMenu_ToggleDeathCounter = 77,
+		MainMenu_CoinDisplay = 78,
+		NetworkMenu_Back = 79,
+		NetworkMenu_Account = 80,
+		AccountMenu_Back = 81,
+		AccountMenu_SetUsername = 82,
+		UsernameMenu_Back = 83,
+		UsernameMenu_SetUsername = 84,
+		UsernameMenu_DisplayUsername = 85,
+		TextInput_DisplayUsername = 86,
+		MainMenu_CurrentLeaderboard = 87,
+		Leaderboards_Back = 88,
+		Leaderboards_Prev = 89,
+		Leaderboards_Next = 90,
+		Leaderboards_Up = 91,
+		Leaderboards_Down = 92,
+		Leaderboards_Leaderboard = 93,
+		OptionsHub_Leaderboards = 94,
+		AccountMenu_DisplayToken = 95,
+		AccountMenu_SetToken = 96,
+		DisplayTokenMenu_Back = 97,
+		DisplayTokenMenu_Display = 98,
+		SetTokenMenu_Back = 99,
+		SetTokenMenu_Set = 100,
+		SetTokenMenu_Display = 101,
+		TextInput_DisplayToken = 102,
+		WaitingForValidationMenu_Back = 103,
+		WaitingForValidationMenu_Display = 104,
+		AccountMenu_WipeAccount = 105,
+		AreYouSureMenu_Yes = 106,
+		AreYouSureMenu_No = 107,
+		MainMenu_OST = 108,
+		MainMenu_VerNum = 109,
+		GameplayMenu_MouseGrab = 110,
+		NetworkMenu_ToggleSteam = 111,
+		NetworkMenu_ToggleDevServer = 112,
+		AdvOptions_Back = 113,
+		AdvOptions_Misc = 114,
+		AdvOptions_Data = 115,
+		GameplayMenu_MuteCheckpoints = 116,
+		GameplayMenu_BlackLoadingScreens = 117,
+		Options_AdvOptions = 118,
+		AdvOpt_Data_Back = 119,
+		AdvOpt_Data_WipeCoins = 120,
+		AdvOpt_Data_WipeAllSavedData = 121,
+		AdvOpt_Data_Yes = 122,
+		AdvOpt_Data_No = 123,
+		AdvOpt_ForceAltMenuOpenButton = 124,
+		Achivo_MitLiebeGemacht = 125,//Beat the secret love letter level
+		Achivo_NoThanksImGood = 126,
+		Achivo_GoinFastImTowerBound = 127,
+		End
+
+	}
+
+	public enum ButtonFunc
+	{
+		None,
+		LeaveNetworkingMenu,
+		Spacer1,
+		ToggleUsageStats,
+		LeaveViewStatsMenu,
+		Stats_AllLevels,
+		Stats_NumOfPlayers,
+		Stats_thegamedesigner,
+		GotoOptionsHub,
+		LeaveOptionsHub,
+		MainMenu_Quit,
+		MainMenu_Play,
+		InGameHub_Resume,
+		InGameHub_Restart,
+		InGameHub_Options,
+		InGameHub_Quit,
+		Achivo_AllasKlar,
+		Achivo_DaddysLove,
+		Achivo_DontStompa,
+		Achivo_MagicMonk,
+		Achivo_Routes66,
+		Achivo_Cheater,
+		Achivo_Reverso,
+		Achivo_Champion,
+		Controls_Back,
+		Controls_SwitchMode,
+		Controls_SetCustom,
+		Options_GoToControls,
+		CustomControls_Back,
+		CustomControls_PlatformerControls,
+		CustomControls_FPSControls,
+		CustomControls_MenuControls,
+		CustomControls_Reset,
+		InGameHub_PGMode,
+		AfterCustomControls_Cancel,
+		AfterCustomControls_Accept,
+		CancelledControls_Ok,
+		RollingCredits_Leave,
+		OptionsHub_GoToCredits,
+		AudioMenu_SoundUp,
+		AudioMenu_SoundDown,
+		AudioMenu_Back,
+		OptionsHub_GoToAudioMenu,
+		AudioMenu_MusicUp,
+		AudioMenu_MusicDown,
+		VisualMenu_ToggleVSync,
+		OptionsHub_GoToVisualMenu,
+		VisualMenu_Back,
+		VisualMenu_GoToRes,
+		VisualMenu_Windowed,
+		VisualMenu_ToggleLowLag,
+		ResMenu_Back,
+		ResMenu_PrevRes,
+		ResMenu_NextRes,
+		ResMenu_AcceptRes,
+		GameplayMenu_TogglePGMode,
+		GameplayMenu_ToggleTimer,
+		GameplayMenu_ToggleDeathCounter,
+		GameplayMenu_ScreenshakeUp,
+		GameplayMenu_ScreenshakeDown,
+		GameplayMenu_Back,
+		OptionsHub_GoToGameplayMenu,
+		NetworkMenu_GoToAccountMenu,
+		AccountMenu_Back,
+		AccountMenu_GoToUsernameMenu,
+		UsernameMenu_Back,
+		UsernameMenu_AttemptToSetUsername,
+		OptionsHub_GoToNetworkingMenu,
+		LeaderboardsNext,
+		LeaderboardsPrev,
+		LeaderboardsBack,
+		LeaderboardsUp,
+		LeaderboardsDown,
+		OptionsHub_GoToLeaderboards,
+		AccountMenu_DisplayToken,
+		AccountMenu_SetToken,
+		DisplayTokenMenu_Back,
+		SetTokenMenu_Back,
+		SetTokenMenu_Set,
+		WaitingForValidationMenu_Back,
+		AccountMenu_WipeAccount,
+		AreYouSureMenu_Yes,
+		AreYouSureMenu_No,
+		MainMenu_OST,
+		GameplayMenu_ToggleMouseGrab,
+		NetworkMenu_ToggleSteam,
+		NetworkMenu_ToggleDevServer,
+		AdvOptions_Back,
+		AdvOptions_Misc,
+		AdvOptions_Data,
+		GameplayMenu_MuteCheckpoints,
+		GameplayMenu_BlackLoadingScreens,
+		Options_GoToAdvOptions,
+		AdvOpt_Data_Back,
+		AdvOpt_Data_WipeCoins,
+		AdvOpt_Data_WipeAllSavedData,
+		AdvOpt_Data_Yes,
+		AdvOpt_Data_No,
+		AdvOpt_ForceAltMenuOpenButton,
+		Achivo_MitLiebeGemacht,//Beat the secret love letter level (heart icon)
+		Achivo_NoThanksImGood,//Dont use teleporters on A Jumping Massacre (backwards arrow)
+		Achivo_GoinFastImTowerBound,//Beat the Alp DLC (rainbow trail)
+		End
+	}
+
+	public enum MenuType //The types of menus
+	{
+		None,
+		NetworkMenu,
+		ViewStatsMenu,
+		MainMenu,
+		OptionsHub,
+		InGameHub,//The in-game menu that pops up on ESC
+		ControlsMenu,
+		CustomControlsHub,
+		SetCustomControls,
+		AfterCustomControls,
+		ControlsCancelledOut,
+		RollingCredits,
+		AudioMenu,
+		VisualMenu,
+		ResMenu,
+		GameplayMenu,
+		MenuBackground,//Generic background for all menus
+		AccountMenu,
+		UsernameMenu,
+		TextInput_UsernameMenu,
+		InGameMenuBackground,//Menu background for ingame menu popup 
+		LeaderboardsMenu,
+		DisplayTokenMenu,
+		SetTokenMenu,
+		TextInput_TokenMenu,
+		WaitingForValidationMenu,
+		AreYouSureMenu,
+		AdvancedOptionsHub,
+		AdvOpt_Data,
+		AdvOpt_Data_WipeAllAreYouSure,
+		End
+	}
+
+
+}

@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1074135939929038}
+  m_IsPrefabParent: 1
+--- !u!1 &1074135939929038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4304345822691132}
+  - component: {fileID: 114849958927090544}
+  - component: {fileID: 114107984384218442}
+  m_Layer: 0
+  m_Name: LocalNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4304345822691132
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074135939929038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114107984384218442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074135939929038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8eb2a0df0d18a74ab84e3898f96e96a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMenuLevel: 0
+  showMouse: 0
+  escapeDoesntOpenInGameMainMenu: 0
+  escapeQuitsToTitle: 0
+  escapeQuitsToWorldMap: 0
+  escapeQuitsApplication: 0
+  loadLevelInfo: 0
+--- !u!114 &114849958927090544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074135939929038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994b53c25d71c614b856c33ef9bd0d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 1
+  gravityCap: 0
+  gravityAccelMulti: 0
+  ltColour: {r: 0, g: 0.61353964, b: 0.8161765, a: 1}
+  dkColour: {r: 0, g: 0.090010166, b: 0.52205884, a: 1}
+  music: {fileID: 8300000, guid: 33e686989cdf6af4a9d1a8322c997f49, type: 3}
+  optionalSecondMusic: {fileID: 0}
+  track1: {fileID: 0}
+  track2: {fileID: 0}
+  swapToTrack2Point: 0
+  swapToTrack2AgainPoint: 0
+  jumpToThisPointOnLoopingTrack2: 0
+  useSwapSystem: 0
+  dontStopCameraOnThisLevel: 0
+  swapStage: 0
+  forceResetMusicOnLevelLoad: 0
+  forceResetMusicOnPlayerDeath: 0
+  playerTrail: 1
+  trailColor: {r: 1, g: 1, b: 1, a: 1}
+  trailLength: 2
+  forceTrailToPlayersLayer: 1
+  dontLoadNewMusicOnNextLevel: 0
+  dontLoop: 0
+  forcePlayAsLoop: 0
+  invinciblePlayer: 0
+  dontCoverLagWithSlowFade: 1
+  disableDestroyOffscreen: 1
+  disableBlockDestroyOffscreen: 0
+  autoSpawnDetailBlocks: 0
+  autoSpawnThisDetailBlock: {fileID: 0}
+  disableSnapToGrid: 1
+  destroyOffScreenOnY: 0
+  extraDestroyOffScreenBuffer: 0
+  turnOffDebug: 0
+  usePlayPoint: 0
+  playPoint: 0
+  useFakeLoopBackToLoopPoint: 0
+  loopPoint: 0
+  useSuperSmoothTransferIntoLooping: 0
+  SuperSmoothSytem_introTrack: {fileID: 0}
+  SuperSmoothSytem_loopTrack: {fileID: 0}
+  SuperSmoothSytem_stage: 0
+  useOverlapSystem: 0
+  overlappingTrack: {fileID: 0}
+  overlapTime: 0
+  overlapStage: 0
+  forceMuteMusicForThisLevel: 0
+  merpRulesOn: 0
+  forceInvinciblePlayer: 0
+  useESJ4SqJump: 1
+  rainLevel: 0
+  freezeMusicForX: 1
+  useNewJumpPhysics: 0
+  useLegacyBlockDestroy: 1
+  cameraScrollMultiplier: 1
+  useSecondCameraForMetaNode: 0
+  secondCamera: {fileID: 0}
+  dontShowScoreOrCountdownTimers: 0
+  dontAllowRespawnKey: 0
+  dontAllowQuitPopup: 0
+  allowWorldPopup: 0
+  hideMobileControls: 0
+  show_IOS_GoBackButton: 0
+  background_Parallax1_batchableMat: {fileID: 0}
+  background_Parallax2_batchableMat: {fileID: 0}
+  background_Parallax3_batchableMat: {fileID: 0}
+  background_Parallax4_batchableMat: {fileID: 0}

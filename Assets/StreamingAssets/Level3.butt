@@ -1,0 +1,7 @@
+type:Block,x:0,y:0,xScale:11;
+type:PlayerSpawn,x:0,y:5;
+type:SetSky,colour1:0/0/0,colour2:90/90/90,skyBands:2;
+type:SetMusic,int1:18;
+
+type:Portal,x:-5,y:2,xScale:0.2,yScale:0.2,destinationButt:CurrentLevel,noSound:true;
+type:Portal,x:5,y:3,xScale:0.5,yScale:0.2,destinationButt:Level2,noSound:true;

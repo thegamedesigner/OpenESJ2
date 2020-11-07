@@ -1,0 +1,463 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1873606991524210}
+  m_IsPrefabParent: 1
+--- !u!1 &1873606991524210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4181005707309538}
+  - component: {fileID: 114047767682550108}
+  m_Layer: 0
+  m_Name: FrEdLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4181005707309538
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1873606991524210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114047767682550108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1873606991524210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c7daabab5bc5a4a925c46ad2146d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mats:
+  - label: black sky
+    type: 2
+    material: {fileID: 2100000, guid: 2e9543b4168a4df4cac84bdaaa3e05ec, type: 2}
+  - label: deep pink flat
+    type: 4
+    material: {fileID: 2100000, guid: 632a5df0221c95e46a4a0c893bdc2f4b, type: 2}
+  - label: deep pink white
+    type: 5
+    material: {fileID: 2100000, guid: 4e42674a0faf0c449a7e145ce1044233, type: 2}
+  - label: dk blue desat
+    type: 6
+    material: {fileID: 2100000, guid: 2ddf1674574939349a6dbbe511fea907, type: 2}
+  - label: dk blue bright
+    type: 7
+    material: {fileID: 2100000, guid: 6207f48a8b2c2d14a836e55a8e3175ac, type: 2}
+  - label: dk red 1
+    type: 8
+    material: {fileID: 2100000, guid: b2a4199c474b5a94c925c3e93aaf0760, type: 2}
+  - label: dk red 2
+    type: 9
+    material: {fileID: 2100000, guid: 3cfc8f265de8f804db2ac76571180887, type: 2}
+  - label: pale orange
+    type: 10
+    material: {fileID: 2100000, guid: e422019140c43954b9d1536529c18b7e, type: 2}
+  - label: flat yellow
+    type: 11
+    material: {fileID: 2100000, guid: 57b9574fc0a27cb4aab04f41c0c6731f, type: 2}
+  - label: Green dk on top
+    type: 12
+    material: {fileID: 2100000, guid: 9db0d972f0b946c48ae672429ddd12fa, type: 2}
+  - label: grey sky
+    type: 14
+    material: {fileID: 2100000, guid: 884092d47f0e3914390ec73713307f5b, type: 2}
+  - label: lt green
+    type: 13
+    material: {fileID: 2100000, guid: e0a1958c6d2cfd34c9160d61a9b1d856, type: 2}
+  - label: flat red
+    type: 15
+    material: {fileID: 2100000, guid: 46355a3a2da78844782ece9b4512fbd0, type: 2}
+  - label: pink 1
+    type: 16
+    material: {fileID: 2100000, guid: 5640e89ca99f877428958bf7e9ce3b65, type: 2}
+  - label: purple 1
+    type: 17
+    material: {fileID: 2100000, guid: 6d66cfcc94861d34ba16b9b097f112bb, type: 2}
+  - label: sky blue
+    type: 1
+    material: {fileID: 2100000, guid: 89d951db8ef030a4a8aa512ee2e6151a, type: 2}
+  - label: snowy pink
+    type: 18
+    material: {fileID: 2100000, guid: bfa06cbfd6c5de94c9e30321e915f4d9, type: 2}
+  - label: stormyblue
+    type: 19
+    material: {fileID: 2100000, guid: d2d8c0067e95d5348ad30cea9d8e02f0, type: 2}
+  - label: whitegreen
+    type: 20
+    material: {fileID: 2100000, guid: ddfc3fc10fce27943b96f1c0964d61c7, type: 2}
+  - label: white
+    type: 21
+    material: {fileID: 2100000, guid: 40dd99e20d4e6bc4d9fe3d0447a42199, type: 2}
+  - label: yellow sky
+    type: 22
+    material: {fileID: 2100000, guid: 5b237644db7af3f48a6bdd0eb206685c, type: 2}
+  - label: flat pink
+    type: 23
+    material: {fileID: 2100000, guid: 2871ec161742ce9488d9123a611eb9a5, type: 2}
+  - label: flat dull purple
+    type: 24
+    material: {fileID: 2100000, guid: 21a9319fb59121247b0c7a8c7acac30d, type: 2}
+  - label: snowy pink 2
+    type: 25
+    material: {fileID: 2100000, guid: 8297f1ef761f23348b465b38017f0989, type: 2}
+  - label: red 1
+    type: 26
+    material: {fileID: 2100000, guid: 8229f8f56edb6224bb0062f80637cb65, type: 2}
+  - label: purplishRed
+    type: 27
+    material: {fileID: 2100000, guid: 3d46be6de51ef5f4d8605a057a765694, type: 2}
+  - label: flat purple
+    type: 28
+    material: {fileID: 2100000, guid: b67f74cb1110e2148b075d7b39a8154f, type: 2}
+  - label: pale purple tan
+    type: 29
+    material: {fileID: 2100000, guid: b050e9f1249dc8045b81070f91eb42e1, type: 2}
+  - label: pink 2
+    type: 30
+    material: {fileID: 2100000, guid: 1347c2819ec00954ca21a52cd320470f, type: 2}
+  - label: green stripes
+    type: 31
+    material: {fileID: 2100000, guid: 0904888105950fc40baed67e11f27214, type: 2}
+  - label: Sky9
+    type: 32
+    material: {fileID: 2100000, guid: 851b850d1bf4e274aaca2f0323f19cf1, type: 2}
+  - label: Sky10
+    type: 33
+    material: {fileID: 2100000, guid: 74cc85d792cd54243b586bef8242f869, type: 2}
+  - label: Sky11
+    type: 34
+    material: {fileID: 2100000, guid: 10c4001326f954b44a67b836a7527bb8, type: 2}
+  - label: Sky11b
+    type: 35
+    material: {fileID: 2100000, guid: 942757bae60fd7c48a55ac936de4be18, type: 2}
+  - label: Sky12
+    type: 36
+    material: {fileID: 2100000, guid: 51982bbb24ed03b4f859406becfdca7d, type: 2}
+  - label: Sky13
+    type: 37
+    material: {fileID: 2100000, guid: 736e9448013f3264c8177bef10f7be4c, type: 2}
+  - label: Sky15
+    type: 38
+    material: {fileID: 2100000, guid: 6986e3d5d9d7c6745a18ce850be6b4d6, type: 2}
+  - label: Sky16
+    type: 39
+    material: {fileID: 2100000, guid: 1c2423d31c8007f429e41ec8971236aa, type: 2}
+  - label: Sky17
+    type: 40
+    material: {fileID: 2100000, guid: 730a417d2b494d84499f1c25e3cc718b, type: 2}
+  - label: Sky18
+    type: 41
+    material: {fileID: 2100000, guid: 86560f106b4aafc42ad3004caae39028, type: 2}
+  - label: Sky19
+    type: 42
+    material: {fileID: 2100000, guid: 503b1c8385358fb47811d894de44b303, type: 2}
+  - label: Sky20
+    type: 43
+    material: {fileID: 2100000, guid: 8bf92fc9f6236b941ae76b492cba5993, type: 2}
+  - label: Sky21
+    type: 44
+    material: {fileID: 2100000, guid: 8902cb9551543df48bf2ff3d3a303011, type: 2}
+  - label: Sky22
+    type: 45
+    material: {fileID: 2100000, guid: 3717964501cf6634a8c1d038991e868e, type: 2}
+  - label: Sky23
+    type: 46
+    material: {fileID: 2100000, guid: 576bfdd3cb6fe9246b2e309ef50d5d35, type: 2}
+  - label: Sky24
+    type: 47
+    material: {fileID: 2100000, guid: 4c4841a989552b240ad13c58636dc047, type: 2}
+  - label: Sky25
+    type: 48
+    material: {fileID: 2100000, guid: 5d8709aaa69101c43bf9dfeb2d79b2af, type: 2}
+  - label: Sky26
+    type: 49
+    material: {fileID: 2100000, guid: d335a7f1588eaa545a2338a9245dc91b, type: 2}
+  - label: Sky27
+    type: 50
+    material: {fileID: 2100000, guid: adafdc4b8b0868049ba113dae43d1e6b, type: 2}
+  - label: Sky28
+    type: 51
+    material: {fileID: 2100000, guid: 735ed945dff4fac4a9893926ef7273dd, type: 2}
+  - label: Sky29
+    type: 52
+    material: {fileID: 2100000, guid: 628af76dc6c936f488d1e7ddc84feff2, type: 2}
+  - label: Sky30
+    type: 53
+    material: {fileID: 2100000, guid: 2ee1eb43f7b109346830af35f6cbd522, type: 2}
+  - label: Sky32
+    type: 54
+    material: {fileID: 2100000, guid: 477d9190538a2f340a066602cfbb127a, type: 2}
+  - label: Sky33
+    type: 55
+    material: {fileID: 2100000, guid: e83d8969ee672c54c992c409fb9b2f36, type: 2}
+  - label: Sky35B
+    type: 56
+    material: {fileID: 2100000, guid: 110cf397558cbbc41af18b700e741c79, type: 2}
+  - label: Sky35A
+    type: 57
+    material: {fileID: 2100000, guid: 3091be642b5719c449250f114fcbda3d, type: 2}
+  - label: Sky36
+    type: 58
+    material: {fileID: 2100000, guid: 5a9e8625dc6c1244188ccf2e8df26cf7, type: 2}
+  - label: Sky37
+    type: 59
+    material: {fileID: 2100000, guid: e4b27cf71e0602448b0a33870d691bd0, type: 2}
+  - label: Sky38
+    type: 60
+    material: {fileID: 2100000, guid: e7b8b24984ea53b478dfe612fd0ed9ef, type: 2}
+  - label: Sky39
+    type: 61
+    material: {fileID: 2100000, guid: 54af0b2358558eb40bd91fa793dd7a26, type: 2}
+  - label: Sky40
+    type: 62
+    material: {fileID: 2100000, guid: 307607d432b8b8c458f6806c427ed65a, type: 2}
+  - label: Sky41
+    type: 63
+    material: {fileID: 2100000, guid: d75a2fa9e0936ea4485bef0e380f1c35, type: 2}
+  - label: Sky43
+    type: 64
+    material: {fileID: 2100000, guid: 13f25884b5d109442afea1d4161649a5, type: 2}
+  library:
+  - label: Block
+    type: 2
+    prefab: {fileID: 100002, guid: f7829b7d64e8fb84780b2939777cf2dd, type: 2}
+    sprite: {fileID: 0}
+  - label: Player Spawn
+    type: 1
+    prefab: {fileID: 1939417105525080, guid: 6d7c25b5d3d611443ac59fa3ef853fc7, type: 2}
+    sprite: {fileID: 21300000, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Spikeball
+    type: 3
+    prefab: {fileID: 1394778674642500, guid: 423d4d095a84916418fa9dcea4281ece, type: 2}
+    sprite: {fileID: 21300016, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Portal
+    type: 4
+    prefab: {fileID: 100010, guid: beef0d65198297c49860536bf8b78483, type: 2}
+    sprite: {fileID: 21300002, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: SetSky
+    type: 5
+    prefab: {fileID: 1078854003098838, guid: a670aa000b582cb48b3b13aa79c3b572, type: 2}
+    sprite: {fileID: 0}
+  - label: SetMusic
+    type: 6
+    prefab: {fileID: 1927644009734232, guid: 4f7e8b58172dca94fb49088548d052d6, type: 2}
+    sprite: {fileID: 0}
+  - label: Frog
+    type: 7
+    prefab: {fileID: 1511073596064522, guid: 3fb2cb31c5089a24e8726c72ea7c0113, type: 2}
+    sprite: {fileID: 21300018, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Ninja Star
+    type: 8
+    prefab: {fileID: 1093847362166128, guid: 00540d0053662b14f83b81cbb6bd6a32, type: 2}
+    sprite: {fileID: 0}
+  - label: Homing Missile
+    type: 9
+    prefab: {fileID: 1306211862097216, guid: 12fbf2c18b6e75644b9dbe67228d72af, type: 2}
+    sprite: {fileID: 0}
+  - label: Shrine Double Jump
+    type: 10
+    prefab: {fileID: 1813975405978054, guid: d86be84d215a2d9408c3b1c602ea0b19, type: 2}
+    sprite: {fileID: 21300024, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Shrine Triple Jump
+    type: 11
+    prefab: {fileID: 1727989640411376, guid: 390f7b16799d37241a2278389b423168, type: 2}
+    sprite: {fileID: 21300026, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Shrine Quintuple Jump
+    type: 12
+    prefab: {fileID: 1989576535986458, guid: c218ddeff28513647a75f07a1db05434, type: 2}
+    sprite: {fileID: 21300028, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Shrine ButtSmash
+    type: 13
+    prefab: {fileID: 1451719766209982, guid: 6be6d798418237c45aa172ddc2f760eb, type: 2}
+    sprite: {fileID: 21300032, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Shrine Airsword
+    type: 14
+    prefab: {fileID: 1692265520445288, guid: 520f16e9ea8e1b8468b4184b77f3b9d7, type: 2}
+    sprite: {fileID: 21300034, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Shrine Neg
+    type: 15
+    prefab: {fileID: 1609055191596818, guid: 7840f787cd3db8849819ed34f85be7ac, type: 2}
+    sprite: {fileID: 21300036, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Laser
+    type: 16
+    prefab: {fileID: 1766154555424596, guid: e096b196d55070445afe75ddcce36873, type: 2}
+    sprite: {fileID: 21300006, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Quad Laser
+    type: 17
+    prefab: {fileID: 1122098785712894, guid: 52814ed68e175fe4ca2cd91ea8c1966c, type: 2}
+    sprite: {fileID: 21300004, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Coin
+    type: 18
+    prefab: {fileID: 1890954693472858, guid: 8a9114d79965a6f4ca3a3be3973d9fad, type: 2}
+    sprite: {fileID: 21300020, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Bounce Arrow
+    type: 19
+    prefab: {fileID: 1021651703062024, guid: ab77f2f05ca50b14eb2e59460fcdfd12, type: 2}
+    sprite: {fileID: 21300022, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Spiky Missile
+    type: 20
+    prefab: {fileID: 1358820632090640, guid: a9e3ab7fc56068c44a970bdb4fe9484b, type: 2}
+    sprite: {fileID: 0}
+  - label: Round Bullet
+    type: 21
+    prefab: {fileID: 1727249945839180, guid: a99e43e6f1d9265438581df74c429e2a, type: 2}
+    sprite: {fileID: 0}
+  - label: Firestick
+    type: 22
+    prefab: {fileID: 1949093532215590, guid: e8ca9532df2e3e146b8f778e407a475c, type: 2}
+    sprite: {fileID: 21300030, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Camera Trigger
+    type: 23
+    prefab: {fileID: 1522932958654486, guid: 4a656ba6cf1c87640be2a2ce3c7e3bd6, type: 2}
+    sprite: {fileID: 21300008, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: ParticleSystem
+    type: 24
+    prefab: {fileID: 1469446279146932, guid: 1fd06c976e257b54894db8d72a56f6e1, type: 2}
+    sprite: {fileID: 0}
+  - label: Decoration
+    type: 25
+    prefab: {fileID: 1306636178522392, guid: a0b1b9c350544a24f87cfb163a1f7955, type: 2}
+    sprite: {fileID: 21300010, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: MovingSpikePlatform
+    type: 27
+    prefab: {fileID: 1132984287841108, guid: 888531f1a785bcd41b2fe7b56fd8be4f, type: 2}
+    sprite: {fileID: 21300012, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Buffalo
+    type: 28
+    prefab: {fileID: 1515561860433736, guid: 70d66e18091f03340833597c199c6e1f, type: 2}
+    sprite: {fileID: 21300042, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: DetailBlock
+    type: 29
+    prefab: {fileID: 1226806510751522, guid: 3fa2f43216287364689b1cf18d31c2d7, type: 2}
+    sprite: {fileID: 21300010, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: ExplodingPlatform
+    type: 30
+    prefab: {fileID: 1619308285399344, guid: bb229e2348d983e4a9aa31c71cc3f24f, type: 2}
+    sprite: {fileID: 21300040, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: MissilePlatform
+    type: 31
+    prefab: {fileID: 1944173430658564, guid: ce3f71b9369c23b45a86857e5c275f5c, type: 2}
+    sprite: {fileID: 21300038, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Sticky Walls
+    type: 36
+    prefab: {fileID: 1015823280485586, guid: e2349f58d2a968743b5d710a4d01bc0b, type: 2}
+    sprite: {fileID: 21300052, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  - label: Bounce Pad
+    type: 35
+    prefab: {fileID: 1299708267004362, guid: f96427e5ffa907149b20a69e2eb87a10, type: 2}
+    sprite: {fileID: 21300054, guid: b281b1c6500243e4aacfa52762964742, type: 3}
+  tracks:
+  - label: env 1
+    type: 1
+    track: {fileID: 8300000, guid: c257332ff157dc64e9ac3729e7d3f037, type: 3}
+  - label: env 5
+    type: 2
+    track: {fileID: 8300000, guid: bd5a928da727955459033e57de25966b, type: 3}
+  - label: env 8222
+    type: 3
+    track: {fileID: 8300000, guid: ad2027e544cdbeb4fb4a8259d3a6ea1d, type: 3}
+  - label: env absolute zero
+    type: 4
+    track: {fileID: 8300000, guid: 946a5c2c230b67e4faba0cac9ff61d7b, type: 3}
+  - label: env darkas
+    type: 5
+    track: {fileID: 8300000, guid: 8342e6eac4cc9ec46a5a9604bf998f3b, type: 3}
+  - label: env future shock
+    type: 6
+    track: {fileID: 8300000, guid: 80167571dfb3e2846826d71fe7dba308, type: 3}
+  - label: env generic techno
+    type: 7
+    track: {fileID: 8300000, guid: f70ebcffc59cdd74dac1225faaad9240, type: 3}
+  - label: env green with me
+    type: 8
+    track: {fileID: 8300000, guid: c4ebe1a7b2b7fb94b8b46641fedff5b9, type: 3}
+  - label: env rokits
+    type: 9
+    track: {fileID: 8300000, guid: a33914f394c07534c896f7f4382e8f96, type: 3}
+  - label: env shakestopper
+    type: 10
+    track: {fileID: 8300000, guid: 380f73844ead6504c997534efb08d312, type: 3}
+  - label: env this sound
+    type: 11
+    track: {fileID: 8300000, guid: 9b4cde0b26345e04c997f1791032c790, type: 3}
+  - label: env two step
+    type: 12
+    track: {fileID: 8300000, guid: 44a1fe3eb6c1179498b148f1310e0225, type: 3}
+  - label: env wobble wobble
+    type: 13
+    track: {fileID: 8300000, guid: 0885cda3609177d409a37dfc5f24c32e, type: 3}
+  - label: env valkyrie
+    type: 14
+    track: {fileID: 8300000, guid: e2c0ef4f18415344cbcbe3b0c7e3dfa9, type: 3}
+  - label: getsix no interruptions
+    type: 15
+    track: {fileID: 8300000, guid: 77b979c20b8b1c94caf4714fc94c5753, type: 3}
+  - label: getsix valhalla
+    type: 16
+    track: {fileID: 8300000, guid: 3d872912b7164924584b43b39ad71900, type: 3}
+  - label: reptiore butter
+    type: 17
+    track: {fileID: 8300000, guid: 4b189de542395fd45963f60c2030df5a, type: 3}
+  - label: reptiore gator raid
+    type: 18
+    track: {fileID: 8300000, guid: 2f0623aa1717c4848a3df817fe3a2aa1, type: 3}
+  - label: reptiore omega hause
+    type: 19
+    track: {fileID: 8300000, guid: b9c30bc3f08ccca45888a36708c8230a, type: 3}
+  - label: reptiore some offensive shit
+    type: 20
+    track: {fileID: 8300000, guid: dc064e2b2c8b1c94fbb0ab82ac05ca0d, type: 3}
+  - label: GetSix_Helix
+    type: 22
+    track: {fileID: 8300000, guid: 112b78b079f92064499a2b0537324525, type: 3}
+  meshes:
+  - label: Cube
+    type: 1
+    mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  - label: Square
+    type: 2
+    mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  - label: Star
+    type: 3
+    mesh: {fileID: 4300000, guid: f8374c76f0d67c34c83467b0583b5fa8, type: 3}
+  - label: Four Point Star
+    type: 4
+    mesh: {fileID: 4300000, guid: 41c7e60d13ff7f1469c90a541ca0bddd, type: 3}
+  - label: Diamond
+    type: 5
+    mesh: {fileID: 4300000, guid: ccf110923ae611742938a2e65ddb1712, type: 3}
+  - label: Circle
+    type: 6
+    mesh: {fileID: 4300000, guid: 1b13c130c04df5746bec596b6de2b152, type: 3}
+  - label: Triangle
+    type: 7
+    mesh: {fileID: 4300000, guid: 4bf59cb62d1d4fb43898849c81d2b973, type: 3}
+  behaviours:
+  - label: AniScript
+    type: 26
+    component: {fileID: 11500000, guid: c785b60e34f0466428b8c340fda81940, type: 3}
+  customSheetMat: {fileID: 2100000, guid: 9403ef0043178ca4b876118378e71e4c, type: 2}

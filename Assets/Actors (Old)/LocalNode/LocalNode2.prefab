@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1271514998904594}
+  m_IsPrefabParent: 1
+--- !u!1 &1271514998904594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4244111117025402}
+  - component: {fileID: 114972654644545592}
+  - component: {fileID: 114769088075323986}
+  m_Layer: 0
+  m_Name: LocalNode2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4244111117025402
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271514998904594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114769088075323986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271514998904594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8eb2a0df0d18a74ab84e3898f96e96a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMenuLevel: 0
+  showMouse: 0
+  escapeDoesntOpenInGameMainMenu: 0
+  autoOpenStartMenu: 0
+  escapeQuitsToWorldMap: 0
+  escapeQuitsToTitle: 0
+  escapeQuitsToStartMenu: 0
+  escapeQuitsApplication: 0
+  loadLevelInfo: 0
+  dontLetRespawnAndRestartHappen: 0
+  ThisLevelHasMom: 0
+  OpenRawMenuOnStart: 0
+  ResetAchivoBools: 0
+  resetToDefaultControlsText: {fileID: 0}
+  resetToDefaultControlsText2: {fileID: 0}
+--- !u!114 &114972654644545592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271514998904594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994b53c25d71c614b856c33ef9bd0d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightColour: {r: 0.77205884, g: 0, b: 0.75076085, a: 1}
+  darkColour: {r: 0.48585197, g: 0, b: 0.49264705, a: 1}
+  gravityMultiplier: 1
+  maxPlayerFallSpeed: 0
+  rainLevel: 0
+  dontShowScoreOrCountdownTimers: 0
+  disableRespawnKey: 0
+  music: {fileID: 8300000, guid: afc83a60ac0696843ae8b13fb310f925, type: 3}
+  usePlayPoint: 0
+  playPoint: 205
+  useSuperSmoothTransferIntoLooping: 0
+  SuperSmoothSytem_introTrack: {fileID: 8300000, guid: 72cdc253472c5644989451ef3fcc074e,
+    type: 3}
+  SuperSmoothSytem_loopTrack: {fileID: 8300000, guid: 590dbe453a9c9744eac9d1159e1e874d,
+    type: 3}

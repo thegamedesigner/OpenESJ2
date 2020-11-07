@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: LocalNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.8050442, y: 1.65703726, z: 33.140625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 994b53c25d71c614b856c33ef9bd0d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldNumber: 1
+  gravityCap: 0
+  gravityAccelMulti: 0
+  ltColour: {r: 0, g: 0, b: 0, a: 0}
+  dkColour: {r: 0, g: 0, b: 0, a: 0}
+  music: {fileID: 0}
+  optionalSecondMusic: {fileID: 0}
+  track1: {fileID: 0}
+  track2: {fileID: 0}
+  swapToTrack2Point: 0
+  swapToTrack2AgainPoint: 0
+  jumpToThisPointOnLoopingTrack2: 0
+  useSwapSystem: 0
+  dontStopCameraOnThisLevel: 0
+  swapStage: 0
+  forceResetMusicOnPlayerDeath: 0
+  playerTrail: 0
+  trailColor: {r: 255, g: 255, b: 255, a: 77}
+  dontLoadNewMusicOnNextLevel: 0
+  dontLoop: 0
+  forcePlayAsLoop: 0
+  invinciblePlayer: 0
+  dontCoverLagWithSlowFade: 0
+  disableDestroyOffscreen: 0
+  disableBlockDestroyOffscreen: 0
+  autoSpawnDetailBlocks: 0
+  autoSpawnThisDetailBlock: {fileID: 0}
+  disableSnapToGrid: 0
+  destroyOffScreenOnY: 0
+  extraDestroyOffScreenBuffer: 0
+  turnOffDebug: 0
+  usePlayPoint: 0
+  playPoint: 0
+  useFakeLoopBackToLoopPoint: 0
+  loopPoint: 0
+  useSuperSmoothTransferIntoLooping: 0
+  SuperSmoothSytem_introTrack: {fileID: 0}
+  SuperSmoothSytem_loopTrack: {fileID: 0}
+  SuperSmoothSytem_stage: 0
+  useOverlapSystem: 0
+  overlappingTrack: {fileID: 0}
+  overlapTime: 0
+  overlapStage: 0
+  merpRulesOn: 0
+  forceInvinciblePlayer: 0
+  rainLevel: 0
+  freezeMusicForX: 0
+  useNewJumpPhysics: 0
+  useLegacyBlockDestroy: 1
+  editorNode: {fileID: 0}
+  editorNodeScript: {fileID: 0}
+  editorLibraryFuncs: {fileID: 0}
+  cameraScrollMultiplier: 1
+  useSecondCameraForMetaNode: 0
+  secondCamera: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

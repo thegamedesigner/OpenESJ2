@@ -1,0 +1,42 @@
+V 1.4 Changelog:
+
+New Weapons added:
+knife
+Handgun
+Shotgun
+
+New animations added:
+
+Knife & Handgun animation set
+Run back
+walk & walk back
+crouch walk & walk back
+Run Shooting (only for assault rifle, machinegun and handgun)
+walk shooting (for machinegun)
+Throw Grenade
+Reload weapons
+
+Animation clips propperly renamed:
+May need to reasign clips in the Character Controller
+
+
+New Weapons:
+
+The new weapons, and a copy of the old ones, are in the prefabs/weapons folder.
+Drag them in the WeaponContainer bone in the soldier bone hierarchy for propper placement in right hand.
+
+The base models keep their original weapon attached, as removing it may cause updating problems in projects 
+made with previous versions
+
+Shotguns use all the assault animation set, except for the shoot animations.
+
+Handgun and knife set should use the assault death animations
+
+
+New Textures:
+Yellow, Grey and Black Soldier materials added.
+
+
+
+The next update will probably be the last one, it will include a rocket launcher and some other animations.
+Requests and suggestions at  polygonblacksmith@gmail.com

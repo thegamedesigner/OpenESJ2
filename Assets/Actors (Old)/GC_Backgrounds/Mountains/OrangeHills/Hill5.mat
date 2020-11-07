@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Hill5
+  m_Shader: {fileID: 4800000, guid: 07fe56dfd07eb1a4f9317d07f82b0da5, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 1550c4ad8eec60a439e5bb95a1f4679b, type: 3}
+          m_Scale: {x: .0625, y: .0625}
+          m_Offset: {x: .25, y: .6875}
+    m_Floats: {}
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .80392158, g: .333333343, b: .0313725509, a: 1}

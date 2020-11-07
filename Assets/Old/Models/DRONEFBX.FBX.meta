@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 26c1e943272c37f41864aca2ebf88f83
+ModelImporter:
+  serializedVersion: 14
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Object89
+    100004: Object05
+    100006: Object01
+    100008: Bip01 L Thigh
+    100010: Bip01 R Finger0Nub
+    100012: Object06
+    100014: Bip01 L Finger0Nub
+    100016: //RootNode
+    100018: Bip01 L Hand
+    100020: Bip01 L Forearm
+    100022: Bip01 L Foot
+    100024: Bip01 L Calf
+    100026: Bip01 R Finger0
+    100028: Bip01 R Calf
+    100030: Bip01 R Thigh
+    100032: Bip01 R Toe01
+    100034: Bip01 R Toe0
+    100036: Bip01 Neck
+    100038: Bip01 Spine2
+    100040: Bip01 R Forearm
+    100042: Bip01 Footsteps
+    100044: Bip01 L Toe0
+    100046: Bip01 R Clavicle
+    100048: Bip01 L Toe0Nub
+    100050: Bip01 HeadNub
+    100052: Bip01 L Clavicle
+    100054: Object03
+    100056: Bip01 R UpperArm
+    100058: Object02
+    100060: Object61
+    100062: Bip01 Head
+    100064: Bip01 Spine1
+    100066: Bip01 L Finger0
+    100068: Bip01 R Toe0Nub
+    100070: Bip01 L Toe02
+    100072: Bip01 L Toe01
+    100074: Bip01 R Hand
+    100076: Object04
+    100078: Bip01 R Foot
+    100080: Bip01 L UpperArm
+    100082: Bip01 R Toe02
+    100084: Bip01 Spine
+    100086: Bip01 Pelvis
+    400000: Bip01
+    400002: Object89
+    400004: Object05
+    400006: Object01
+    400008: Bip01 L Thigh
+    400010: Bip01 R Finger0Nub
+    400012: Object06
+    400014: Bip01 L Finger0Nub
+    400016: //RootNode
+    400018: Bip01 L Hand
+    400020: Bip01 L Forearm
+    400022: Bip01 L Foot
+    400024: Bip01 L Calf
+    400026: Bip01 R Finger0
+    400028: Bip01 R Calf
+    400030: Bip01 R Thigh
+    400032: Bip01 R Toe01
+    400034: Bip01 R Toe0
+    400036: Bip01 Neck
+    400038: Bip01 Spine2
+    400040: Bip01 R Forearm
+    400042: Bip01 Footsteps
+    400044: Bip01 L Toe0
+    400046: Bip01 R Clavicle
+    400048: Bip01 L Toe0Nub
+    400050: Bip01 HeadNub
+    400052: Bip01 L Clavicle
+    400054: Object03
+    400056: Bip01 R UpperArm
+    400058: Object02
+    400060: Object61
+    400062: Bip01 Head
+    400064: Bip01 Spine1
+    400066: Bip01 L Finger0
+    400068: Bip01 R Toe0Nub
+    400070: Bip01 L Toe02
+    400072: Bip01 L Toe01
+    400074: Bip01 R Hand
+    400076: Object04
+    400078: Bip01 R Foot
+    400080: Bip01 L UpperArm
+    400082: Bip01 R Toe02
+    400084: Bip01 Spine
+    400086: Bip01 Pelvis
+    2300000: Object01
+    2300002: Object06
+    2300004: Object03
+    2300006: Object02
+    2300008: Object04
+    3300000: Object01
+    3300002: Object06
+    3300004: Object03
+    3300006: Object02
+    3300008: Object04
+    4300000: Object89
+    4300002: Object04
+    4300004: Object03
+    4300006: Object02
+    4300008: Object01
+    4300010: Object06
+    7400000: Take 001
+    7400002: idle
+    7400004: walk
+    11100000: //RootNode
+    13700000: Bip01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    generateAnimations: 3
+    bakeSimulation: 0
+    splitAnimations: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: walk
+      takeName: 
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMesh: 0
+    keepQuads: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  createAvatar: 0
+  userData: 

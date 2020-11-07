@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESJ2 Level Format Spec</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="esj2-level-format-specification">ESJ2 Level Format Specification</h1>
+<p>Currently, the level editor opens only 1 file, which is CurrentLevel.butt, this will be in ESJ2_Data/StreamingAssets/</p>
+<p>You can open it with any text editor, such as Notepad, Text Edit, Visual Studio, or… anything that can open a .txt file.</p>
+<p>The level format is made up of <em>entities</em>, each of which have <em>parameters</em>. Each parameter has a name and a value.</p>
+<h2 id="entities">Entities</h2>
+<p>As a best practice, entities should begin with a <code>type</code> parameter, and must end with a semi-colon <code>;</code> separator. This entity has 3 parameters: <code>type</code>, <code>x</code>, and <code>y</code>.<br>
+<code>type:block,x:3,y:0;</code></p>
+<h2 id="parameters">Parameters</h2>
+<p>Parameters are made up of two parts: a name, and a value. Each entity can be defined by many parameters, each separated by a comma <code>,</code>. Parameter names and values are separated by a colon <code>:</code>.<br>
+<code>type:block</code><br>
+<code>x:3</code><br>
+<code>y:-38</code></p>
+<p><strong>Default Values</strong><br>
+All parameters have default values, omitting them will use that default value. For example, the following entity creates a block at position (5, 0), since the y-position is set to zero by default.<br>
+<code>type:block,x:5;</code></p>
+<p>This example will create a block, at world position (3, 4) that is 3 units tall (that is to say, 3 times the height of a “normal” block.) In this scenario, <code>xScale</code> and <code>yScale</code> have a default value of 1, and we are overriding the value of <code>yScale</code>.<br>
+<code>type:block,x:3,y:4,yScale:3;</code></p>
+<h2 id="prefabs">Prefabs</h2>
+<p>You can define your own prefabs by adding the <code>prefab</code> parameter to an entity definition. As a best practice, define prefabs with the prefab parameter first.<br>
+<code>prefab:42,type:NinjaStar,speed:3;</code></p>
+<p>This prefab can now be referenced in certain places by the number 42 (such as when defining a Frog entity.)<br>
+See also <a href="#bullet-types">Bullet Types</a> below.</p>
+<h2 id="common-parameter-definitions-and-default-values">Common Parameter Definitions and Default Values</h2>
+<dl>
+<dt>type (string : None)</dt>
+<dd>Signifies which entity the game will create when loading the level.<br>
+For a list of possible types, see <a href="#types">types</a> below.</dd>
+<dt>x (float : 0.0)</dt>
+<dd>The x-position (in world space) that the entity will spawn.</dd>
+<dt>y (float : 0.0)</dt>
+<dd>The y-position (in world space) that the entity will spawn.</dd>
+<dt>[pos|position] (Vector2 : 0.0, 0.0)</dt>
+<dd>This is a shorthand for setting x and y separately <code>pos:1/20</code> will create an entity at world position (1, 20).</dd>
+<dt>zPos (float : type-dependant)</dt>
+<dd>Set the depth that the entity will be drawn. A value of 0 or less will be drawn behind the camera and invisible to the player.</dd>
+<dt>xScale (float : 1.0)</dt>
+<dd>Set the width of an entity relative to its default size.</dd>
+<dt>yScale (float : 1.0)</dt>
+<dd>Set the height of an entity relative to its default size.</dd>
+<dt>scale (Vector2 : 1.0, 1.0)</dt>
+<dd>Shorthand for setting <code>xScale</code> and <code>yScale</code>. Example: <code>scale:3/3</code> creates an entity 3 times its normal size.</dd>
+<dt>tilt (float : 0.0)</dt>
+<dd>Number of degrees to rotate an entity. Ignored for Block types.</dd>
+<dt>prefab (integer : -1)</dt>
+<dd>Contains the prefab’s id number (can be any number) to identify it. example: prefab:77</dd>
+<dt>speed (float : type-dependant)</dt>
+<dd>How fast something moves, if it is supposed to move.</dd>
+<dt>createLate (float : 0.0)</dt>
+<dd>A time in seconds to delay the creation of an entity after a level loads.</dd>
+</dl>
+<h2 id="types">Types</h2>
+<dl>
+<dt>PlayerSpawn</dt>
+<dd>
+<p>Spawns the player.</p>
+</dd>
+<dt>Block</dt>
+<dd>
+<p>A solid thing to stand on. Cannot be tilted.</p>
+</dd>
+<dt>SpikeBall</dt>
+<dd>
+<p>A spiky hurty thing.</p>
+</dd>
+<dt>Portal</dt>
+<dd>
+<p>Creates an end-of-level portal.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>destinationLevel (string : None)</dt>
+<dd>Takes you to a developer-created level, if you know the file name.</dd>
+<dt>destinationButt (string : None)</dt>
+<dd>Overrides <code>destinationLevel</code> if present.<br>
+Loads a custom .butt file with the provided name, you may omit the extension.</dd>
+<dt>noSound (bool : false)</dt>
+<dd>Determines if the portal makes that tinkling sound. Set to <code>true</code> to silence the portal.</dd>
+</dl>
+</dd>
+<dt>SetSky</dt>
+<dd>
+<p>An invisible object that configures the sky’s colour when it’s created.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>color1 (Color : 0, 0, 0)</dt>
+<dd>Sets the colour at the top of the screen. <code>color1:255/255/255</code> will be white.</dd>
+<dt>color2 (Color : 0, 0, 0)</dt>
+<dd>Sets the colour at the bottom of the screen <code>color2:0/0/0</code> will be black.</dd>
+<dt>skyBands (integer : 0)</dt>
+<dd>Determines the number of “bands” or “steps” that will divide the sky. A value of 0 or 1 will result in a smooth gradient between <code>color1</code> and <code>color2</code>.<br>
+Many original ESJ levels use a value or 6 or 8.</dd>
+</dl>
+</dd>
+<dt>SetMusic</dt>
+<dd>
+<p>An invisible object that sets the music when it’s created.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>int1 (integer : 0)</dt>
+<dd>Selects which track to play.
+<ol>
+<li>None</li>
+<li>ENV_1</li>
+<li>ENV_5</li>
+<li>ENV_8222</li>
+<li>ENV_AbsoluteZero</li>
+<li>ENV_Darkas</li>
+<li>ENV_FutureShock</li>
+<li>ENV_GenericTechno</li>
+<li>ENV_GreenWithMe</li>
+<li>ENV_Rokits</li>
+<li>ENV_Shakestopper</li>
+<li>ENV_ThisSound</li>
+<li>ENV_TwoStep</li>
+<li>ENV_WobbleWobble</li>
+<li>ENV_Valkyrie</li>
+<li>GetSix_NoInterruptions</li>
+<li>GetSix_Valhalla</li>
+<li>Reptiore_Butter</li>
+<li>Reptiore_GatorRaid</li>
+<li>Reptiore_OmegaHauzer</li>
+<li>Reptiore_SomeRegrettablyOffensiveShit</li>
+</ol>
+</dd>
+</dl>
+</dd>
+<dt>Ability Shrines</dt>
+<dd>
+<p>These are likely to change in a future update</p>
+<ul>
+<li>ShrineDoubleJump</li>
+<li>ShrineTripleJump</li>
+<li>ShrineQuintupleJump</li>
+<li>ShrineButtSmash</li>
+<li>ShrineAirSword</li>
+<li>ShrineRemoveAbilities</li>
+</ul>
+</dd>
+<dt>Frog</dt>
+<dd>
+<p>Creates a frog entity.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>ammo (integer : -1)</dt>
+<dd>The prefab id number of the ammo you wish this frog to fire see <a href="#bullet-types">Bullet Types</a> below.</dd>
+<dt>firingDelay (float : 2.0)</dt>
+<dd>Time in seconds between how slowly a frog fires bullets/missiles</dd>
+</dl>
+</dd>
+<dt>Laser</dt>
+<dd>
+<p>Creates a single laser<br>
+This type has custom parameters:</p>
+<dl>
+<dt>speed (float : 0.0)</dt>
+<dd>Speed the laser will spin</dd>
+</dl>
+</dd>
+<dt>QuadLaser</dt>
+<dd>
+<p>Creates a 4-way laser in an X shape.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>speed (float : 15.0)</dt>
+<dd>Speed the laser will spin</dd>
+</dl>
+</dd>
+<dt>Coin</dt>
+<dd>
+<p>A coin you can collect!</p>
+</dd>
+<dt>BounceArrow</dt>
+<dd>
+<p>An arrow you can bounce on once before it disappears.</p>
+</dd>
+<dt>Firestick</dt>
+<dd>
+<p>A line of rotating spikeballs.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>speed (float : 200.0)</dt>
+<dd>the speed at which the firestick will rotate.</dd>
+</dl>
+</dd>
+<dt>MovingSpikePlatform</dt>
+<dd>
+<p>A block with spikes on three sides. It’s upsidedown for some reason, so if you want to stand on it, set <code>tilt:180</code>.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>tilt (float : 0.0)</dt>
+<dd>Rotates the platform. Setting this to non-90-degree increments will probably break things.</dd>
+<dt>nodePos (Vector2 : 0.0/0.0)</dt>
+<dd>Sets the world position that the platform will move to from its starting position.</dd>
+<dt>speed</dt>
+<dd>The time in seconds it takes the platform to move from <code>pos</code> to <code>nodePos</code>.</dd>
+<dt>easing</dt>
+<dd>The type of easing to apply to the platform’s movement.<br>
+0: Linear movement<br>
+1: Sine easing</dd>
+</dl>
+</dd>
+<dt>Particles</dt>
+<dd>
+<p>Creates a particle system.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>mesh (enumeration : None)</dt>
+<dd>Possible values:
+<ul>
+<li>Cube</li>
+<li>Square</li>
+<li>Star</li>
+<li>FourPointStar</li>
+<li>Diamond</li>
+<li>Circle</li>
+<li>Triangle</li>
+</ul>
+</dd>
+<dt>emissionPerSecond (float : 10.0)</dt>
+<dd>Number of particles per second</dd>
+<dt>speedMin (float : 5.0)</dt>
+<dd>How fast they move (minimum this amount.)<br>
+If you want all particles to move at speed 5, set both <code>speedMin</code> and <code>speedMax</code> to 5.</dd>
+<dt>speedMax (float : 5.0)</dt>
+<dd>how fast they move (up to this amount)</dd>
+<dt>startSizeMin (float : 5.0)</dt>
+<dd>the minimum starting size for each particle</dd>
+<dt>startSizeMax (float : 5.0)</dt>
+<dd>the maximum starting size for each particle</dd>
+<dt>lifespanMin (float : 5.0)</dt>
+<dd>the minimum time before each particle dies</dd>
+<dt>lifespanMax (float : 5.0)</dt>
+<dd>the maximum time before each particle dies</dd>
+<dt>rotationMin (float : 0.0)</dt>
+<dd>The minimum amount each particle will rotate</dd>
+<dt>rotationMax (float : 0.0)</dt>
+<dd>The maximum amount each particle will rotate</dd>
+<dt>shape (enumeration : Box)</dt>
+<dd>Shape of the emitter. Possible values:
+<ul>
+<li>Box</li>
+<li>Circle</li>
+<li>Cone</li>
+<li>Sphere</li>
+<li>Any other Unity <a href="https://docs.unity3d.com/ScriptReference/ParticleSystemShapeType.html">ParticleSystemShapeType</a></li>
+</ul>
+</dd>
+<dt>shapeScaleX (float : 1.0)</dt>
+<dd>how wide the shape is</dd>
+<dt>shapeScaleY (float : 1.0)</dt>
+<dd>how long the shape is</dd>
+<dt>shapeScaleZ (float : 1.0)</dt>
+<dd>how deep the shape is</dd>
+<dt>color1 (Color : 0, 0, 0)</dt>
+<dd>the first color of the particle. uses an additive material so darker colours will be transparent instead.</dd>
+<dt>color2 (Color : 0, 0, 0)</dt>
+<dd>the second color of the particle. Particles will fade towards this color.</dd>
+<dt>alpha[1-5] (float : 0.0)</dt>
+<dd>Five alphas states of the particle.<br>
+Each particle will fade between all of these alphas, valid values between 0.0-1.0.</dd>
+</dl>
+</dd>
+<dt>CameraTrigger</dt>
+<dd>
+<p>Configures the camera.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>cameraState (enumeration : None)</dt>
+<dd>Possible Values:</dd>
+</dl>
+<ul>
+<li>HorPush</li>
+<li>VerPush</li>
+<li>Pos</li>
+<li>HorScrolling</li>
+<li>VerScrolling</li>
+<li>HorScrollingWithBumpRight</li>
+<li>VerScrollingWithBumpUp</li>
+<li>HorPushWideBox</li>
+<li>SlowPos</li>
+<li>HorPushLookAhead</li>
+<li>HorVerPush</li>
+<li>VerySlowPos</li>
+<li>VerPushHighBox</li>
+<li>InstaPos</li>
+</ul>
+<dl>
+<dt>nodePosX</dt>
+<dd>Used for <code>cameraState:Pos</code>, moves the camera to the specified x-position.</dd>
+<dt>nodePosY</dt>
+<dd>Used for <code>cameraState:Pos</code>, moves the camera to the specified y-position.</dd>
+<dt>nodePos</dt>
+<dd>Shorthand for <code>nodePosX</code> and <code>nodePosY</code>. Example: <code>nodePos:3/-8</code></dd>
+<dt>track</dt>
+<dd>The x or y that the camera slides along, in Scrolling or Push modes.</dd>
+<dt>minX (float : -Infinity)</dt>
+<dd>The minimum x-position that the camera can be. Allows limiting scrolling or push cameras.</dd>
+<dt>minY (float : -Infinity)</dt>
+<dd>The minimum y-position that the camera can be. Allows limiting scrolling or push cameras.</dd>
+<dt>min (Vector2 : -Infinity, -Infinity)</dt>
+<dd>Shorthand for setting <code>minX</code> and <code>minY</code> Example: <code>min:20/0</code> sets minimum x-position to 20, and minimum y-position to 0.</dd>
+<dt>maxX (float : Infinity)</dt>
+<dd>The maximum x-position that the camera can be. Allows limiting scrolling or push cameras.</dd>
+<dt>maxY (float : Infinity)</dt>
+<dd>The maximum y-position that the camera can be. Allows limiting scrolling or push cameras.</dd>
+<dt>max (Vector2 : Infinity, Infinity)</dt>
+<dd>Shorthand for setting <code>maxX</code> and <code>maxY</code> Example: <code>max:100/20</code> sets maximum x-position to 100, and maximum y-position to 20.</dd>
+</dl>
+</dd>
+</dl>
+<h3 id="bullet-types">Bullet Types</h3>
+<p>These types are most suitable for use as ammo for Frogs.</p>
+<dl>
+<dt>NinjaStar</dt>
+<dd>
+<p>A bullet type<br>
+This type has custom parameters:</p>
+<dl>
+<dt>lifespan (float : 2.0)</dt>
+<dd>Time in seconds the bullet will live before disappearing</dd>
+<dt>speed (float : 5.0)</dt>
+<dd>The bullet’s speed.</dd>
+</dl>
+</dd>
+<dt>RoundBullet</dt>
+<dd>
+<p>A bullet type you can airsword off of<br>
+This type has custom parameters:</p>
+<dl>
+<dt>lifespan (float : 3.0)</dt>
+<dd>Time in seconds the bullet will live before disappearing</dd>
+<dt>speed (float : 5.0)</dt>
+<dd>The bullet’s speed</dd>
+</dl>
+</dd>
+<dt>HomingMissile</dt>
+<dd>
+<p>A bullet type. – Homing missile that turns to chase the player.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>lifespan (float : 8.0)</dt>
+<dd>Time in seconds the bullet will live before disappearing</dd>
+<dt>speed (float : 7.0)</dt>
+<dd>The bullet’s speed</dd>
+<dt>turningSpeed (float : 55.0)</dt>
+<dd>How fast homing missiles turn.</dd>
+</dl>
+</dd>
+<dt>SpikyHomingMissile</dt>
+<dd>
+<p>A bullet type – Homing missile you can’t kill with airsword (It’s spiky.)<br>
+<strong>BUG:</strong> The player shouldn’t be able to kill this type with double jump, but currently can.<br>
+This type has custom parameters:</p>
+<dl>
+<dt>lifespan (float : 8.0)</dt>
+<dd>Time in seconds the bullet will live before disappearing</dd>
+<dt>speed (float : 7.0)</dt>
+<dd>The bullet’s speed</dd>
+<dt>turningSpeed (float : 55.0)</dt>
+<dd>How fast homing missiles turn.</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</body>
+
+</html>
